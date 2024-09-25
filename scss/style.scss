@@ -1,1 +1,14 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+body{background-color: aqua;}
+.container{
+    background-color: red;
+}
+
+.row{
+    width: 100%;
+    background-color: red;
+}
+section{
+    margin: 5%;
+}

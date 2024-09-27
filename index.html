@@ -1,38 +1,98 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorat 2024-2025</title>
-    <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorat 2024-2025</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button> -->
-        <!-- NAVBAR-DROPDOWN -->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <!-- <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">S'identifier</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">S'inscrire</a>
-            </li> -->
-          </ul>
-          <ul class="navbar-nav">
-
-          </ul>
-        </div>
+        </button>
+      NAVBAR-DROPDOWN
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">S'identifier</a>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link" href="#">S'inscrire</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    
-      
-    <!-- End Example Code -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    </div>
+  </nav> -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+      <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Tuteur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Avis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Devenez Tuteur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Formulaire</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="banner">
+    <div class="partRech">
+      <form class="d-flex" role="search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+        </svg>
+        <input class="form-control me-2 ps-5" type="search" placeholder="Que voulez-vous apprendre ?"
+          aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Rechercher</button>
+      </form>
+      <div class="liste_departement">
+        <ul>
+          <li><a href="#">Arts Appliqués</a></li>
+          <li><a href="#">Techniques</a></li>
+          <li><a href="#">Economique & Social</a></li>
+          <li><a href="#">Pédagogique</a></li>
+          <li><a href="#">Paramédical</a></li>
+        </ul>
+        <p>Départements</p>
+      </div>
+    </div>
+    <div class="partIllu">
+      <img src="img/illu_banner.png" alt="">
+    </div>
+  </div>
+  <main>
+    <section class="avis">
+<div class="partIllu">
+  <h1>Votre avis compte !</h1>
+  <img src="img/avis illu 1.png" alt="">
+</div>
+    </section>
+  </main>
+
+
+  <!-- End Example Code -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

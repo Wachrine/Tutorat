@@ -9,7 +9,8 @@
 </head>
 
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
-  <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+  <header>
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,67 +30,167 @@
     </div>
   </nav> -->
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
               aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button> -->
-      <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Tuteur</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Avis</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Devenez Tuteur</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Formulaire</a>
-          </li>
-        </ul>
+        <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Tuteur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Avis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Devenez Tuteur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Formulaire</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="banner">
+      <div class="partRech">
+        <form class="d-flex" role="search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+          </svg>
+          <input class="form-control me-2 ps-5" type="search" placeholder="Que voulez-vous apprendre ?"
+            aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Rechercher</button>
+        </form>
+        <div class="liste_departement">
+          <ul>
+            <li><a href="#">Arts Appliqués</a></li>
+            <li><a href="#">Techniques</a></li>
+            <li><a href="#">Economique & Social</a></li>
+            <li><a href="#">Pédagogique</a></li>
+            <li><a href="#">Paramédical</a></li>
+          </ul>
+          <p>Départements</p>
+        </div>
+      </div>
+      <div class="partIllu">
+        <img src="img/illu_banner.png" alt="">
       </div>
     </div>
-  </nav>
-  <div class="banner">
-    <div class="partRech">
-      <form class="d-flex" role="search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
-          viewBox="0 0 16 16">
-          <path
-            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-        </svg>
-        <input class="form-control me-2 ps-5" type="search" placeholder="Que voulez-vous apprendre ?"
-          aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Rechercher</button>
-      </form>
-      <div class="liste_departement">
-        <ul>
-          <li><a href="#">Arts Appliqués</a></li>
-          <li><a href="#">Techniques</a></li>
-          <li><a href="#">Economique & Social</a></li>
-          <li><a href="#">Pédagogique</a></li>
-          <li><a href="#">Paramédical</a></li>
-        </ul>
-        <p>Départements</p>
-      </div>
-    </div>
-    <div class="partIllu">
-      <img src="img/illu_banner.png" alt="">
-    </div>
-  </div>
+  </header>
   <main>
     <section class="avis">
-<div class="partIllu">
-  <h1>Votre avis compte !</h1>
-  <img src="img/avis illu 1.png" alt="">
-</div>
+      <div class="partIllu">
+        <h1>Votre avis compte !</h1>
+        <img src="img/avis illu 1.png" alt="">
+      </div>
+      <div class="partCarousel">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="img/carte_avis.svg" class="d-block w-100" alt="Image 1"> <!-- Ajoutez une image ici -->
+              <div class="carousel-caption d-none d-md-block">
+                <div class="profil">
+                  <div class="ident">
+                    <h2>Adèle</h2>
+                    <p>Arts Appliqués</p>
+                  </div>
+                  <div class="status">
+                    <p>Tutorée</p>
+                  </div>
+                </div>
+                <div class="txt">
+                  <p>J'ai trouvé mon tuteur sur cette plateforme et c'est une expérience formidable ! Le tuteur est
+                    très compétent et m'a
+                    aidé à comprendre des concepts difficiles. Je recommande vivement cette plateforme à tous les
+                    étudiants qui cherchent de
+                    l'aide.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="img/carte_avis.svg" class="d-block w-100" alt="Image 1"> <!-- Ajoutez une image ici -->
+            <div class="carousel-caption d-none d-md-block">
+              <div class="profil">
+                <div class="ident">
+                  <h2>Maria</h2>
+                  <p>Techniques</p>
+                </div>
+                <div class="status">
+                  <p>Tutorée</p>
+                </div>
+                <div class="txt">
+                  <p>J'ai trouvé mon tuteur sur cette plateforme et c'est une expérience formidable ! Le tuteur est
+                    très compétent et m'a
+                    aidé à comprendre des concepts difficiles. Je recommande vivement cette plateforme à tous les
+                    étudiants qui cherchent de
+                    l'aide.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/carte_avis.svg" class="d-block w-100" alt="Image 1"> <!-- Ajoutez une image ici -->
+            <div class="carousel-caption d-none d-md-block">
+              <div class="profil">
+                <div class="ident">
+                  <h2>Jean</h2> <!-- Correction du nom pour diversifier -->
+                  <p>Sciences</p> <!-- Correction du domaine pour diversifier -->
+                </div>
+                <div class="status">
+                  <p>Tutoré</p> <!-- Correction du genre -->
+                </div>
+                <!-- <div class="txt"></div>
+                <p>J'ai trouvé mon tuteur sur cette plateforme et c'est une expérience formidable ! Le tuteur est
+                  très compétent et m'a
+                  aidé à comprendre des concepts difficiles. Je recommande vivement cette plateforme à tous les
+                  étudiants qui cherchent de
+                  l'aide.</p>
+              </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <!-- Contrôles du carrousel -->
+          <div class="arrow">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev">
+              <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+              </svg>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+              data-bs-slide="next">
+              <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+              </svg>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-
 
   <!-- End Example Code -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

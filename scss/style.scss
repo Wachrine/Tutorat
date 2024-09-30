@@ -7,7 +7,7 @@
 // font telecharger 
 @font-face {
     font-family: 'Marydale Regular';
-    src: url(font/Marydale_Regular.ttf) format("opentype");
+    src: url(/font/Marydale_Regular.ttf) format("opentype");
 }
 
 /* Définition des variables pour les familles de police */
@@ -41,175 +41,182 @@ body {
     flex-direction: column;
     gap: 8rem;
 
-    .bg-body-tertiary {
-        background-color: #ffffff !important;
+    header {
+        // height: 100vh;
+        .bg-body-tertiary {
+            background-color: #ffffff !important;
 
-        .container-fluid {
-            .navbar-collapse {
-                display: flex;
-                justify-content: flex-end;
-                position: fixed;
-                z-index: 100;
-                right: 0;
+            .container-fluid {
+                .navbar-collapse {
+                    display: flex;
+                    justify-content: flex-end;
+                    position: fixed;
+                    z-index: 100;
+                    right: 0;
 
-                .navbar-nav {
-                    gap: 2rem;
+                    .navbar-nav {
+                        gap: 2rem;
 
-                    .nav-item {
-                        .nav-link {
-                            @include typography2();
-                            font-size: 24px;
-                            display: inline-block;
-                            background-color: rgb(255, 255, 255);
-                            border-radius: 13px;
-                            padding-left: 1rem;
-                            padding-right: 1rem;
-
-                            &:hover {
-                                color: rgb(255, 255, 255);
+                        .nav-item {
+                            .nav-link {
+                                @include typography2();
+                                font-size: 24px;
                                 display: inline-block;
-                                background-color: rgb(0, 0, 0);
+                                background-color: rgb(255, 255, 255);
                                 border-radius: 13px;
                                 padding-left: 1rem;
                                 padding-right: 1rem;
+
+                                &:hover {
+                                    color: rgb(255, 255, 255);
+                                    display: inline-block;
+                                    background-color: rgb(0, 0, 0);
+                                    border-radius: 13px;
+                                    padding-left: 1rem;
+                                    padding-right: 1rem;
+                                }
                             }
+
+                            // .nav-link.active {
+                            //     color: rgb(255, 255, 255);
+                            //     background-color: rgb(0, 0, 0);
+                            //     border-radius: 13px;
+                            //     padding-left: 1rem;
+                            //     padding-right: 1rem;
+                            // }
                         }
 
-                        // .nav-link.active {
-                        //     color: rgb(255, 255, 255);
+                        // .custom-nav-item {
                         //     background-color: rgb(0, 0, 0);
                         //     border-radius: 13px;
                         //     padding-left: 1rem;
                         //     padding-right: 1rem;
+
+                        //     .nav-link {
+                        //         color: rgb(255, 255, 255);
+                        //         &:hover {
+                        //                 color: rgb(0, 0, 0); // Change la couleur du texte au survol
+                        //                 text-decoration: underline; // Ajoute un soulignement
+                        //             }
+                        //     }
                         // }
                     }
-
-                    // .custom-nav-item {
-                    //     background-color: rgb(0, 0, 0);
-                    //     border-radius: 13px;
-                    //     padding-left: 1rem;
-                    //     padding-right: 1rem;
-
-                    //     .nav-link {
-                    //         color: rgb(255, 255, 255);
-                    //         &:hover {
-                    //                 color: rgb(0, 0, 0); // Change la couleur du texte au survol
-                    //                 text-decoration: underline; // Ajoute un soulignement
-                    //             }
-                    //     }
-                    // }
                 }
             }
         }
-    }
 
-    .banner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .partRech {
+        .banner {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            gap: 0.5rem;
-            width: 50%;
+            height: 100vh;
 
-            .d-flex {
+            .partRech {
                 display: flex;
-                justify-content: center;
-                position: relative;
-                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                width: 50%;
 
-                .bi-search {
-                    position: absolute;
-                    z-index: 5;
-                    bottom: 24%;
-                    left: 21%;
-                }
-
-                .form-control {
-                    border: 2px solid black;
-                    height: 7vh;
-                    width: 60%;
-                    border-radius: 10px;
-                }
-
-                ::placeholder {
-                    @include typography2();
-                    font-size: 18px;
-                    color: rgba(171, 171, 171, 1);
-                }
-
-                .btn-outline-success {
-                    position: absolute;
-                    right: 22%;
-                    bottom: 15%;
-                    display: inline-block;
-                    background-color: black;
-                    border: none;
-                    border-radius: 10px;
-                    @include typography1();
-                    font-size: 14px;
-                    color: white;
-                }
-            }
-
-            .liste_departement {
-                display: inline-block;
-                border: 2px solid black;
-                width: auto;
-                height: 7vh;
-                border-radius: 10px;
-                padding: 0 1rem;
-
-                ul {
+                .d-flex {
                     display: flex;
-                    align-items: center;
-                    height: 100%;
-                    margin: 0;
-                    padding: 0;
-                    flex-wrap: nowrap;
-                    gap: 1rem;
+                    justify-content: center;
+                    position: relative;
+                    width: 100%;
 
-                    li {
+                    .bi-search {
+                        position: absolute;
+                        z-index: 5;
+                        bottom: 24%;
+                        left: 26%;
+                    }
+
+                    .form-control {
+                        border: 2px solid black;
+                        height: 5vh;
+                        width: 50%;
+                        border-radius: 12px;
+                    }
+
+                    ::placeholder {
+                        @include typography2();
+                        font-size: 18px;
+                        color: rgba(171, 171, 171, 1);
+                    }
+
+                    .btn-outline-success {
+                        position: absolute;
+                        right: 27%;
+                        bottom: 15%;
+                        display: inline-block;
+                        background-color: black;
+                        border: none;
+                        border-radius: 10px;
+                        @include typography1();
+                        font-size: 14px;
+                        color: white;
+                    }
+                }
+
+                .liste_departement {
+                    display: inline-block;
+                    border: 2px solid black;
+                    width: auto;
+                    height: 5vh;
+                    border-radius: 12px;
+                    padding: 0 1rem;
+
+                    ul {
                         display: flex;
                         align-items: center;
-                        justify-content: space-between;
-                        list-style: none;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                        flex-wrap: nowrap;
+                        gap: 1rem;
 
-                        a {
-                            text-decoration: none;
-                            @include typography1();
-                            font-size: 14px;
-                            white-space: nowrap;
+                        li {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            list-style: none;
 
-                            &:hover {
-                                color: rgba(133, 62, 243, 1);
-                                transform: scale(1.1);
-                                font-weight: 500;
+                            a {
+                                text-decoration: none;
+                                @include typography1();
+                                font-size: 14px;
+                                white-space: nowrap;
+
+                                &:hover {
+                                    color: rgba(133, 62, 243, 1);
+                                    transform: scale(1.1);
+                                    font-weight: 500;
+                                }
                             }
                         }
                     }
+
+                    p {
+                        @include typography1();
+                        color: rgba(213, 213, 213, 1);
+                        font-size: 15px;
+                        margin-top: 1vh;
+                    }
                 }
 
-                p {
-                    @include typography1();
-                    color: rgba(213, 213, 213, 1);
-                    font-size: 15px;
-                    margin-top: 1vh;
-                }
             }
 
-        }
-
-        .partIllu {
-            display: flex;
-            justify-content: flex-end;
-            width: 50%;
+            .partIllu {
+                display: flex;
+                justify-content: flex-end;
+                width: 50%;
+                img{
+                    object-fit: contain;
+                    width: 50vw;
+                }
+            }
         }
     }
-
 
     // -------AVIS-----------
     main {
@@ -221,6 +228,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 100vh;
 
             .partIllu {
                 display: flex;
@@ -247,10 +255,7 @@ body {
                     width: 50%;
 
                     .carousel-inner {
-                        background-color: aqua;
                         .carousel-item {
-                            display: flex;
-                            flex-direction: column;
                             height: 100%;
                             width: 100%;
 

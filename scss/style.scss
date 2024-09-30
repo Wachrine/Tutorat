@@ -1,5 +1,5 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "breakpoint";
+// @import "breakpoint";
 
 
 
@@ -16,8 +16,12 @@ a{
 a:hover{
     color: #B0B0B0;
 }
-.contenu{
 
+section.tst{
+    height: 100vh;
+}
+
+.contenu{
     height: 100vh;
     padding-inline: 8%;
     display: flex;
@@ -33,7 +37,7 @@ a:hover{
         border: 2px black solid;
         border-bottom: 10px black solid;
         border-radius: 3vw;
-        padding-block: 2%;
+        padding-block: 4%;
         padding-inline: 4%;
         align-items: center;
     
@@ -128,7 +132,7 @@ a:hover{
 
             &:hover{
                 a{
-                    font-size: 15px;
+                    font-size: 20px;
                     transition: 500ms;
                 }
                 // width: 47%;

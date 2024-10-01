@@ -65,16 +65,26 @@ body {
                     position: fixed;
                     z-index: 100;
                     right: 0;
+                    background-color: rgba(255, 255, 255, 0.486);
 
                     .navbar-nav {
                         gap: 2rem;
 
                         .nav-item {
+                            .active{
+                                color: rgb(255, 255, 255);
+                                display: inline-block;
+                                background-color: rgb(0, 0, 0);
+                                border-radius: 13px;
+                                padding-left: 1rem;
+                                padding-right: 1rem; 
+                            }
                             .nav-link {
                                 @include typography2();
                                 font-size: 24px;
+                                // font-weight: 600;
                                 display: inline-block;
-                                background-color: rgb(255, 255, 255);
+                                background-color: rgba(255, 255, 255, 0);
                                 border-radius: 13px;
                                 padding-left: 1rem;
                                 padding-right: 1rem;
@@ -430,10 +440,6 @@ body {
 
                 &:hover {
                     transform: scale(1.05);
-
-                    a {
-                        font-size: 28px;
-                    }
                 }
 
             }
@@ -469,7 +475,7 @@ body {
                         @include typography2();
                         font-size: 35px;
                         font-weight: 600;
-                        background-color: burlywood;
+                        background-color: rgba(133, 62, 243, 1);
                         height: 2rem;
                     }
 
@@ -484,40 +490,28 @@ body {
 
                     a {
                             @include typography2();
-                            font-size: 25px;
+                            font-size: 22px;
                             color: white;
                             text-decoration: none;
                     }
 
                     &:hover {
-                        a {
-                            font-size: 20px;
-                            transition: 500ms;
-                        }
-
-                        // width: 47%;
-                        // transition: 500ms;
+                        transform: scale(1.05);
                     }
 
                 }
 
             }
         }
+        #id_form {
+            // max-width: 500px;
+            // margin: 0 auto;
+            // padding: 20px;
+          }
     }
 
 }
 
-/** section 2 **/
-
-
-// a {
-//     text-decoration: none;
-//     color: black;
-// }
-
-// a:hover {
-//     color: #B0B0B0;
-// }
 
 
 
@@ -527,21 +521,32 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
-    section {
-        padding: 60px;
+    .container {
+        padding-top: 2%;
         border-top: 2px black solid;
-        height: 300px;
+        width: 100%;
 
         .col-4 {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: left;
+            h4{
+                @include typography2();
+                font-size: 30px; 
+                font-weight: 600;
+            }
 
             ul {
+                padding: 0;
                 li {
-                    text-decoration: none;
                     list-style: none;
+                    a{
+                        text-decoration: none;
+                        @include typography1();
+                        font-size: 20px;
+                    }
                 }
             }
 

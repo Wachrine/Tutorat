@@ -7,28 +7,30 @@
   <title>Tutorat 2024-2025</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+<body data-bs-spy="scroll" data-bs-target="#myNavbar" data-bs-offset="0" tabindex="0"
+  class="p-3 m-0 border-0 bd-example m-0 border-0">
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-default navbar-fixed-top">
       <div class="container-fluid">
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
         <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+          aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Tuteur</a>
+              <a class="nav-link" href="#id_contenu">Tuteur idéal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#id_avis">Avis</a>
+              <a class="nav-link" href="#id_avis">Avis</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Devenez Tuteur</a>
+              <a class="nav-link" href="#id_devenir">Devenez Tuteur</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Formulaire</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -63,42 +65,42 @@
     </div>
   </header>
   <main>
-    <section class="contenu">
-        <h1>Trouver le tuteur idéal est facile !</h1>
-        <div class="row etapes">
-            <div class="col-4 gx-5 gsap1">
-                <div class="card" >
-                    <div class="card-body text-center">
-                      <h5 class="card-title">étape 1</h5>
-                      <p class="card-text">CHOISISSEZ VOTRE TUTEUR</p>
-                    </div>
-                    <img src="img/Group1.png" class="card-img-top" alt="...">
-                    <img src="img/Group1.png" class="card-img-top" alt="...">
-                </div>
+    <section id="id_contenu" class="contenu">
+      <h1>Trouver le tuteur idéal est facile !</h1>
+      <div class="row etapes">
+        <div class="col-4 gx-5 gsap1">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">étape 1</h5>
+              <p class="card-text">CHOISISSEZ VOTRE TUTEUR</p>
             </div>
-
-            <div class="col-4 gx-5 gsap2">
-                <div class="card" >
-                    <div class="card-body text-center">
-                      <h5 class="card-title">étape 2</h5>
-                      <p class="card-text">PARTAGEZ VOS OBJECTIFS</p>
-                    </div>
-                    <img src="img/Group1.png" class="card-img-top" alt="...">
-                    <img src="img/Group1.png" class="card-img-top" alt="...">
-                </div>
-            </div>
-
-            <div class="col-4 gx-5 gsap3">
-                <div class="card" >
-                    <div class="card-body text-center">
-                      <h5 class="card-title">étape 3</h5>
-                      <p class="card-text">RÉSERVEZ VOTRE LEÇON</p>
-                    </div>
-                    <img src="img/cal.png" class="card-img-top" alt="...">
-                </div>
-            </div>
+            <img src="img/Group1.png" class="card-img-top" alt="...">
+            <img src="img/Group1.png" class="card-img-top" alt="...">
+          </div>
         </div>
-        <div class="btn"><a href="">S’inscrire maintenant</a></div>
+
+        <div class="col-4 gx-5 gsap2">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">étape 2</h5>
+              <p class="card-text">PARTAGEZ VOS OBJECTIFS</p>
+            </div>
+            <img src="img/Group1.png" class="card-img-top" alt="...">
+            <img src="img/Group1.png" class="card-img-top" alt="...">
+          </div>
+        </div>
+
+        <div class="col-4 gx-5 gsap3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">étape 3</h5>
+              <p class="card-text">RÉSERVEZ VOTRE LEÇON</p>
+            </div>
+            <img src="img/cal.png" class="card-img-top" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="btn"><a href="">S’inscrire maintenant</a></div>
     </section>
     <section id="id_avis" class="avis">
       <div class="partIllu">
@@ -129,48 +131,48 @@
                 </div>
               </div>
             </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/carte_avis.svg" class="d-block w-100" alt="Image 1"> <!-- Ajoutez une image ici -->
-            <div class="carousel-caption d-none d-md-block">
-              <div class="profil">
-                <div class="ident">
-                  <h2>Maria</h2>
-                  <p>Techniques</p>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="img/carte_avis.svg" class="d-block w-100" alt="Image 1"> <!-- Ajoutez une image ici -->
+              <div class="carousel-caption d-none d-md-block">
+                <div class="profil">
+                  <div class="ident">
+                    <h2>Maria</h2>
+                    <p>Techniques</p>
+                  </div>
+                  <div class="status">
+                    <p>Tutorée</p>
+                  </div>
                 </div>
-                <div class="status">
-                  <p>Tutorée</p>
+                <div class="txt">
+                  <p>J'ai trouvé mon tuteur sur cette plateforme et c'est une expérience formidable ! Le tuteur est
+                    très compétent et m'a
+                    aidé à comprendre des concepts difficiles. Je recommande vivement cette plateforme à tous les
+                    étudiants qui cherchent de
+                    l'aide.</p>
                 </div>
-              </div>
-              <div class="txt">
-                <p>J'ai trouvé mon tuteur sur cette plateforme et c'est une expérience formidable ! Le tuteur est
-                  très compétent et m'a
-                  aidé à comprendre des concepts difficiles. Je recommande vivement cette plateforme à tous les
-                  étudiants qui cherchent de
-                  l'aide.</p>
               </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/carte_avis.svg" class="d-block w-100" alt="Image 1"> <!-- Ajoutez une image ici -->
-            <div class="carousel-caption d-none d-md-block">
-              <div class="profil">
-                <div class="ident">
-                  <h2>Jean</h2>
-                  <p>Sciences</p>
+            <div class="carousel-item">
+              <img src="img/carte_avis.svg" class="d-block w-100" alt="Image 1"> <!-- Ajoutez une image ici -->
+              <div class="carousel-caption d-none d-md-block">
+                <div class="profil">
+                  <div class="ident">
+                    <h2>Jean</h2>
+                    <p>Sciences</p>
+                  </div>
+                  <div class="status">
+                    <p>Tutoré</p>
+                  </div>
                 </div>
-                <div class="status">
-                  <p>Tutoré</p>
+                <div class="txt">
+                  <p>J'ai trouvé mon tuteur sur cette plateforme et c'est une expérience formidable ! Le tuteur est
+                    très compétent et m'a
+                    aidé à comprendre des concepts difficiles. Je recommande vivement cette plateforme à tous les
+                    étudiants qui cherchent de
+                    l'aide.</p>
                 </div>
-              </div>
-              <div class="txt">
-                <p>J'ai trouvé mon tuteur sur cette plateforme et c'est une expérience formidable ! Le tuteur est
-                  très compétent et m'a
-                  aidé à comprendre des concepts difficiles. Je recommande vivement cette plateforme à tous les
-                  étudiants qui cherchent de
-                  l'aide.</p>
               </div>
             </div>
-          </div>
           </div>
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -204,61 +206,78 @@
         </div>
       </div>
     </section>
-    <section class="devenir">
-        <div class="row ">
-            <img class="col-6" src="img/main.png" alt="">
-            <div class="col-6 gx-5">
-                <h2>Devenez Tuteur !</h2>
-                <p>Partagez votre savoir à l’autre</p>
-                <div class="btn"><a href="">S’inscrire maintenant</a></div>
-            </div>
+    <section id="id_devenir" class="devenir">
+      <div class="row ">
+        <img class="col-6" src="img/main.png" alt="">
+        <div class="col-6 gx-5">
+          <h2>Devenez Tuteur !</h2>
+          <p>Partagez votre savoir à l’autre</p>
+          <div class="btn"><a href="">S’inscrire maintenant</a></div>
         </div>
+      </div>
+    </section>
+
+    <section id="id_form" class="contact container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-6">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="nameInput" placeholder="Nom">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="emailInput" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="messageTextarea" rows="3" placeholder="Message"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary w-100">Envoyer</button>
+        </div>
+      </div>
     </section>
   </main>
 
-      <!-- footer -->
-      <footer class=".container-fluid">
-        <section class="container row ">
-        <div class="col-4 gx-7">
-            <h4>Départements</h4>
-            <ul>
-                <li><a href="">Arts Appliqués</a></li>
+  <!-- footer -->
+  <footer class=".container-fluid">
+    <section class="container row ">
+      <div class="col-4 gx-7">
+        <h4>Départements</h4>
+        <ul>
+          <li><a href="">Arts Appliqués</a></li>
 
-                <li><a href="">Techniques</a></li>
-                
-                <li><a href="">Economique & Social</a></li>
-                
-                <li><a href="">Pédagogique</a></li>
-                
-                <li><a href="">Paramédical</a></li>
-                
-            </ul>
-        </div>
+          <li><a href="">Techniques</a></li>
 
-        <div class="col-4 gx-7">
-            <h4>Qui sommes-nous ?</h4>
-            <ul>
-                <li><a href="">Nous contacter</a></li>
+          <li><a href="">Economique & Social</a></li>
 
-                <li><a href="">À propos de nous</a></li>
-                
-            </ul>
-        </div>
+          <li><a href="">Pédagogique</a></li>
 
-        <div class="col-4 gx-7 ">
-            <h4>À propos</h4>
-            <ul>
-                <li><a href="">FAQ</a></li>
+          <li><a href="">Paramédical</a></li>
 
-                <li><a href="">Trouver un e tuteur rice</a></li>
-                
-                <li><a href="">Devenir Tuteur rice</a></li>
-                
-            </ul>
-        </div>
+        </ul>
+      </div>
+
+      <div class="col-4 gx-7">
+        <h4>Qui sommes-nous ?</h4>
+        <ul>
+          <li><a href="">Nous contacter</a></li>
+
+          <li><a href="">À propos de nous</a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-4 gx-7 ">
+        <h4>À propos</h4>
+        <ul>
+          <li><a href="">FAQ</a></li>
+
+          <li><a href="">Trouver un e tuteur rice</a></li>
+
+          <li><a href="">Devenir Tuteur rice</a></li>
+
+        </ul>
+      </div>
     </section>
-    </footer>
-    
+  </footer>
+
   <!-- End Example Code -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="gsap.js"></script>

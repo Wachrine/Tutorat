@@ -30,22 +30,30 @@ $font-family-secondary: 'Marydale Regular';
     line-height: $line-height;
     color: $color;
 }
-
-* {
+ /* Mixin pour les boutons */
+ @mixin btn($colorbtn: rgb(0, 0, 0), $color: rgb(255, 255, 255)) {
+    background-color: $colorbtn;
+    color: $color;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  * {
     box-sizing: border-box;
 
 }
-
 body {
     display: flex;
     flex-direction: column;
     gap: 8rem;
 
     header {
-
         // height: 100vh;
+
         .bg-body-tertiary {
             background-color: #ffffff !important;
+   
 
             .container-fluid {
                 .navbar-collapse {
@@ -81,20 +89,19 @@ body {
                     }
                 }
             }
+        }
 
             .banner {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 height: 100vh;
-
                 .partRech {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     gap: 0.5rem;
                     width: 50%;
-
                     .d-flex {
                         display: flex;
                         justify-content: center;
@@ -194,363 +201,347 @@ body {
                     }
                 }
             }
-        }
+        
+    }
 
-        // -------AVIS-----------
-        main {
+    // -------AVIS-----------
+    main {
+        display: flex;
+        flex-direction: column;
+        // gap: 8rem;
+
+        .avis {
             display: flex;
-            flex-direction: column;
-            // gap: 8rem;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
 
-            .avis {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-
-                .partIllu {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    width: 50%;
-
-                    h1 {
-                        @include typography2();
-                        font-weight: 600;
-                    }
-                }
-
-                .partCarousel {
-                    display: flex;
-                    justify-content: center;
-                    width: 50%;
-                    margin-top: 7%;
-
-                    .carousel {
-                        position: relative;
-                        display: flex;
-                        justify-content: center;
-                        width: 50%;
-
-                        .carousel-inner {
-                            .carousel-item {
-                                height: 100%;
-                                width: 100%;
-
-                                .carousel-caption {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    height: 100%;
-                                    width: 18vw;
-
-                                    .profil {
-                                        display: flex;
-                                        align-items: center;
-                                        height: 23vh;
-                                        width: 100%;
-
-                                        .ident {
-                                            display: flex;
-                                            justify-content: flex-end;
-                                            flex-direction: column;
-                                            width: 100%;
-
-                                            h2 {
-                                                display: flex;
-                                                justify-content: flex-start;
-                                                @include typography2();
-                                                font-size: 40px;
-                                                margin-bottom: 0;
-                                                font-weight: 600;
-                                            }
-
-                                            p {
-                                                display: flex;
-                                                padding-bottom: 0;
-                                                @include typography1();
-                                                color: rgba(213, 213, 213, 1);
-                                                font-size: 17px;
-                                            }
-                                        }
-
-                                        .status {
-                                            width: 100%;
-
-                                            p {
-                                                @include typography1();
-                                                font-size: 17px;
-                                            }
-                                        }
-                                    }
-
-                                    .txt {
-                                        p {
-                                            @include typography1();
-                                            font-size: 17px;
-                                            font-weight: 500;
-                                            text-align: left;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-
-                        .carousel-indicators {
-                            position: absolute;
-                            z-index: 100;
-                            height: 5vh;
-                            bottom: -9%;
-                            display: flex;
-                            align-items: center;
-
-                            button {
-                                margin-bottom: 0;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 50%;
-                                background-color: #000000;
-                                border: none;
-                                opacity: 0.5;
-                            }
-
-                            button.active {
-                                background-color: #000000;
-                                opacity: 1;
-                            }
-
-                            button:hover {
-                                opacity: 0.75;
-                            }
-                        }
-                    }
-
-                    .arrow {
-                        position: absolute;
-                        background-color: aquamarine;
-                        width: 100%;
-                        bottom: 0;
-
-                        .carousel-control-prev,
-                        .carousel-control-next {
-                            background-color: rgba(0, 0, 0, 0.837);
-                            border: none;
-                            border-radius: 20%;
-                            width: 50px;
-                            height: 50px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            svg {
-                                width: 40px;
-                                height: 40px;
-                            }
-
-                        }
-                    }
-                }
-            }
-
-            .contenu {
-                height: 100vh;
-                padding-inline: 8%;
+            .partIllu {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
+                width: 50%;
 
                 h1 {
                     @include typography2();
                     font-weight: 600;
-                    margin-bottom: 4vh;
                 }
+            }
 
-                .row {
-                    border: 2px black solid;
-                    border-bottom: 10px black solid;
-                    border-radius: 3vw;
-                    padding-block: 4%;
-                    padding-inline: 4%;
-                    align-items: center;
+            .partCarousel {
+                display: flex;
+                justify-content: center;
+                width: 50%;
+                margin-top: 7%;
 
-                    .col-4 {
-                        .card {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            border: 2px black solid;
-                            border-radius: 2vw;
-                            padding-block: 2%;
+                .carousel {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    width: 50%;
 
-                            .card-body {
-                                h5 {
-                                    @include typography2();
-                                    font-size: 20px;
-                                    font-weight: 600;
+                    .carousel-inner {
+                        .carousel-item {
+                            height: 100%;
+                            width: 100%;
+
+                            .carousel-caption {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 100%;
+                                width: 18vw;
+
+                                .profil {
+                                    display: flex;
+                                    align-items: center;
+                                    height: 23vh;
+                                    width: 100%;
+
+                                    .ident {
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        flex-direction: column;
+                                        width: 100%;
+
+                                        h2 {
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            @include typography2();
+                                            font-size: 40px;
+                                            margin-bottom: 0;
+                                            font-weight: 600;
+                                        }
+
+                                        p {
+                                            display: flex;
+                                            padding-bottom: 0;
+                                            @include typography1();
+                                            color: rgba(213, 213, 213, 1);
+                                            font-size: 17px;
+                                        }
+                                    }
+
+                                    .status {
+                                        width: 100%;
+
+                                        p {
+                                            @include typography1();
+                                            font-size: 17px;
+                                        }
+                                    }
                                 }
 
-                                p {
-                                    @include typography1();
-                                    font-size: 15px;
-                                    color: rgba(133, 62, 243, 1);
-                                    font-weight: 600;
+                                .txt {
+                                    p {
+                                        @include typography1();
+                                        font-size: 17px;
+                                        font-weight: 500;
+                                        text-align: left;
+                                    }
                                 }
                             }
                         }
+                    }
 
-                        img {
-                            width: 25%;
-                            margin-bottom: 5px;
+
+                    .carousel-indicators {
+                        position: absolute;
+                        z-index: 100;
+                        height: 5vh;
+                        bottom: -9%;
+                        display: flex;
+                        align-items: center;
+
+                        button {
+                            margin-bottom: 0;
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background-color: #000000;
+                            border: none;
+                            opacity: 0.5;
                         }
 
+                        button.active {
+                            background-color: #000000;
+                            opacity: 1;
+                        }
+
+                        button:hover {
+                            opacity: 0.75;
+                        }
+                    }
+                }
+
+                .arrow {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+
+                    .carousel-control-prev,
+                    .carousel-control-next {
+                        background-color: rgba(0, 0, 0, 0.837);
+                        border: none;
+                        border-radius: 20%;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        svg {
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .contenu {
+            height: 100vh;
+            padding-inline: 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3vh;
+
+            h1 {
+                @include typography2();
+                font-weight: 600;
+                margin-bottom: 4vh;
+            }
+
+            .row {
+                border: 2px black solid;
+                border-bottom: 10px black solid;
+                border-radius: 3vw;
+                padding-block: 4%;
+                padding-inline: 4%;
+                align-items: center;
+
+                .col-4 {
+                    .card {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border: 2px black solid;
+                        border-radius: 2vw;
+                        padding-block: 2%;
+
+                        .card-body {
+                            h5 {
+                                @include typography2();
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+
+                            p {
+                                @include typography1();
+                                font-size: 15px;
+                                color: rgba(133, 62, 243, 1);
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 25%;
+                        margin-bottom: 5px;
+                    }
+
+                }
+            }
+
+            .btn {
+                @include btn();
+                a {
+                    @include typography2();
+                    font-size: 25px;
+                    color: white;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+
+                    a {
+                        font-size: 28px;
+                    }
+                }
+
+            }
+        }
+
+        .devenir {
+            height: 100vh;
+            padding-inline: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .row {
+                border: 2px black solid;
+                border-bottom: 10px black solid;
+                border-radius: 3vw;
+                padding-block: 2%;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    object-fit: cover;
+                }
+
+                .gx-5 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2vh;
+                    h2 {
+                        @include typography2();
+                        font-size: 35px;
+                        font-weight: 600;
+                        background-color: burlywood;
+                        height: 2rem;
+                    }
+
+                    p {
+                        font-size: 25px;
+                        margin: 0;
                     }
                 }
 
                 .btn {
-                    margin-top: 50px;
-                    width: 20%;
-                    aspect-ratio: 16/4;
-                    background-color: black;
-                    border-radius: 12px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: background-color 0.3s ease, transform 0.3s ease;
+                    @include btn();
 
                     a {
-                        @include typography2();
-                        font-size: 25px;
-                        color: white;
+                            @include typography2();
+                            font-size: 25px;
+                            color: white;
+                            text-decoration: none;
                     }
 
                     &:hover {
-                        transform: scale(1.05);
-
                         a {
-                            font-size: 28px;
+                            font-size: 20px;
+                            transition: 500ms;
                         }
 
-                        width: 22%;
+                        // width: 47%;
+                        // transition: 500ms;
                     }
 
-                }
-            }
-
-            .devenir {
-                height: 100vh;
-                padding-inline: 20%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                .row {
-                    border: 2px black solid;
-                    border-bottom: 10px black solid;
-                    border-radius: 3vw;
-                    padding-block: 2%;
-                    align-items: center;
-                    justify-content: center;
-
-                    div {
-                        display: flex;
-                        flex-direction: column;
-                        align-content: center;
-                        justify-content: center;
-                        align-items: center;
-                    }
-
-                    img {
-                        object-fit: cover;
-                    }
-
-                    .col-6 {
-                        h2 {
-                             @include typography2();
-                            font-size: 25px;
-                            margin-bottom: 45px;
-                        }
-
-                        p {
-                            font-size: 25px;
-                        }
-                    }
-
-                    div.btn {
-                        margin-top: 50px;
-                        width: 45%;
-                        aspect-ratio: 16/4;
-                        background-color: black;
-                        border-radius: 12px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        a {
-                            color: white;
-                        }
-
-                        &:hover {
-                            a {
-                                font-size: 20px;
-                                transition: 500ms;
-                            }
-
-                            // width: 47%;
-                            // transition: 500ms;
-                        }
-
-                    }
-
-                }
-            }
-        }
-    }
-
-    /** section 2 **/
-
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    a:hover {
-        color: #B0B0B0;
-    }
-
-
-
-
-
-
-
-    /** foot  **/
-
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        section {
-            padding: 60px;
-            border-top: 2px black solid;
-            height: 300px;
-
-            .col-4 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                ul {
-                    li {
-                        text-decoration: none;
-                        list-style: none;
-                    }
                 }
 
             }
         }
     }
+
+}
+
+/** section 2 **/
+
+
+// a {
+//     text-decoration: none;
+//     color: black;
+// }
+
+// a:hover {
+//     color: #B0B0B0;
+// }
+
+
+
+/** foot  **/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section {
+        padding: 60px;
+        border-top: 2px black solid;
+        height: 300px;
+
+        .col-4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            ul {
+                li {
+                    text-decoration: none;
+                    list-style: none;
+                }
+            }
+
+        }
+    }
+}

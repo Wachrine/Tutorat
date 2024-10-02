@@ -1,6 +1,6 @@
 // Assurez-vous que le DOM est chargé avant d'exécuter le script
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.to(".partRech", { x: 50 });
+  gsap.from(".partRech", { x: -50 });
   gsap.from(".partillubanner", { x: 200 });
 
   gsap.registerPlugin(ScrollTrigger); // Enregistrer le plugin ScrollTrigger

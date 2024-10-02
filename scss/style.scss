@@ -33,19 +33,22 @@ $font-family-secondary: 'Marydale Regular';
     line-height: $line-height;
     color: $color;
 }
- /* Mixin pour les boutons */
- @mixin btn($colorbtn: rgb(0, 0, 0), $color: rgb(255, 255, 255)) {
+
+/* Mixin pour les boutons */
+@mixin btn($colorbtn: rgb(0, 0, 0), $color: rgb(255, 255, 255)) {
     background-color: $colorbtn;
     color: $color;
     border-radius: 12px;
     display: inline-block;
     padding: 1rem 2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  * {
+}
+
+* {
     box-sizing: border-box;
 
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -56,7 +59,7 @@ body {
 
         .bg-body-tertiary {
             background-color: #ffffff !important;
-   
+
 
             .container-fluid {
                 .navbar-collapse {
@@ -71,14 +74,15 @@ body {
                         gap: 2rem;
 
                         .nav-item {
-                            .active{
+                            .active {
                                 color: rgb(255, 255, 255);
                                 display: inline-block;
                                 background-color: rgb(0, 0, 0);
                                 border-radius: 13px;
                                 padding-left: 1rem;
-                                padding-right: 1rem; 
+                                padding-right: 1rem;
                             }
+
                             .nav-link {
                                 @include typography2();
                                 font-size: 24px;
@@ -104,117 +108,119 @@ body {
             }
         }
 
-            .banner {
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+
+            .partRech {
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
                 align-items: center;
-                height: 100vh;
-                .partRech {
+                gap: 0.5rem;
+                width: 50%;
+
+                .d-flex {
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 0.5rem;
-                    width: 50%;
-                    .d-flex {
-                        display: flex;
-                        justify-content: center;
-                        position: relative;
-                        width: 100%;
+                    justify-content: center;
+                    position: relative;
+                    width: 100%;
 
-                        .bi-search {
-                            position: absolute;
-                            z-index: 5;
-                            bottom: 24%;
-                            left: 26%;
-                        }
-
-                        .form-control {
-                            border: 2px solid black;
-                            height: 5vh;
-                            width: 50%;
-                            border-radius: 12px;
-                        }
-
-                        ::placeholder {
-                            @include typography2();
-                            font-size: 18px;
-                            color: rgba(171, 171, 171, 1);
-                        }
-
-                        .btn-outline-success {
-                            position: absolute;
-                            right: 27%;
-                            bottom: 15%;
-                            display: inline-block;
-                            background-color: black;
-                            border: none;
-                            border-radius: 10px;
-                            @include typography1();
-                            font-size: 14px;
-                            color: white;
-                        }
+                    .bi-search {
+                        position: absolute;
+                        z-index: 5;
+                        bottom: 24%;
+                        left: 26%;
                     }
 
-                    .liste_departement {
-                        display: inline-block;
+                    .form-control {
                         border: 2px solid black;
-                        width: auto;
                         height: 5vh;
+                        width: 50%;
                         border-radius: 12px;
-                        padding: 0 1rem;
+                    }
 
-                        ul {
+                    ::placeholder {
+                        @include typography2();
+                        font-size: 18px;
+                        color: rgba(171, 171, 171, 1);
+                    }
+
+                    .btn-outline-success {
+                        position: absolute;
+                        right: 27%;
+                        bottom: 15%;
+                        display: inline-block;
+                        background-color: black;
+                        border: none;
+                        border-radius: 10px;
+                        @include typography1();
+                        font-size: 14px;
+                        color: white;
+                    }
+                }
+
+                .liste_departement {
+                    display: inline-block;
+                    border: 2px solid black;
+                    width: auto;
+                    height: 5vh;
+                    border-radius: 12px;
+                    padding: 0 1rem;
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                        flex-wrap: nowrap;
+                        gap: 1rem;
+
+                        li {
                             display: flex;
                             align-items: center;
-                            height: 100%;
-                            margin: 0;
-                            padding: 0;
-                            flex-wrap: nowrap;
-                            gap: 1rem;
+                            justify-content: space-between;
+                            list-style: none;
 
-                            li {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                list-style: none;
+                            a {
+                                text-decoration: none;
+                                @include typography1();
+                                font-size: 14px;
+                                white-space: nowrap;
 
-                                a {
-                                    text-decoration: none;
-                                    @include typography1();
-                                    font-size: 14px;
-                                    white-space: nowrap;
-
-                                    &:hover {
-                                        color: rgba(133, 62, 243, 1);
-                                        transform: scale(1.1);
-                                        font-weight: 500;
-                                    }
+                                &:hover {
+                                    color: rgba(133, 62, 243, 1);
+                                    transform: scale(1.1);
+                                    font-weight: 500;
                                 }
                             }
                         }
-
-                        p {
-                            @include typography1();
-                            color: rgba(213, 213, 213, 1);
-                            font-size: 15px;
-                            margin-top: 1vh;
-                        }
                     }
 
+                    p {
+                        @include typography1();
+                        color: rgba(213, 213, 213, 1);
+                        font-size: 15px;
+                        margin-top: 1vh;
+                    }
                 }
 
-                .partIllu {
-                    display: flex;
-                    justify-content: flex-end;
-                    width: 50%;
+            }
 
-                    img {
-                        object-fit: contain;
-                        width: 50vw;
-                    }
+            .partIllu {
+                display: flex;
+                justify-content: flex-end;
+                width: 50%;
+
+                img {
+                    object-fit: contain;
+                    width: 50vw;
                 }
             }
-        
+        }
+
     }
 
     // -------AVIS-----------
@@ -431,6 +437,7 @@ body {
 
             .btn {
                 @include btn();
+
                 a {
                     @include typography2();
                     font-size: 25px;
@@ -471,6 +478,7 @@ body {
                     align-items: center;
                     justify-content: center;
                     gap: 2vh;
+
                     h2 {
                         @include typography2();
                         font-size: 35px;
@@ -489,10 +497,10 @@ body {
                     @include btn();
 
                     a {
-                            @include typography2();
-                            font-size: 22px;
-                            color: white;
-                            text-decoration: none;
+                        @include typography2();
+                        font-size: 22px;
+                        color: white;
+                        text-decoration: none;
                     }
 
                     &:hover {
@@ -503,11 +511,31 @@ body {
 
             }
         }
+
         #id_form {
-            // max-width: 500px;
-            // margin: 0 auto;
-            // padding: 20px;
-          }
+            h1{
+                @include typography2();
+                font-weight: 600; 
+            }
+            .row {
+                .col-md-8 {
+                    .btn-primary {
+                        display: flex;
+                        justify-content: flex-start;
+                        @include btn();
+                        border: none;
+                        @include typography2();
+                        font-size: 22px;
+                        color: white;
+                        text-decoration: none;
+                        width: auto;
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }
@@ -532,17 +560,20 @@ footer {
             display: flex;
             flex-direction: column;
             align-items: left;
-            h4{
+
+            h4 {
                 @include typography2();
-                font-size: 30px; 
+                font-size: 30px;
                 font-weight: 600;
             }
 
             ul {
                 padding: 0;
+
                 li {
                     list-style: none;
-                    a{
+
+                    a {
                         text-decoration: none;
                         @include typography1();
                         font-size: 20px;

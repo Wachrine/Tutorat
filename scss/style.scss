@@ -1,6 +1,9 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "_mobile.scss";
 
+
+// POUR RANIAAAA
+
 /* Importation des polices de GoogleFont */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -22,6 +25,7 @@ $font-family-secondary: 'Marydale Regular';
     font-weight: $weight;
     line-height: $line-height;
     color: $color;
+    text-align: center;
 }
 
 @mixin typography2($family: $font-family-secondary, $line-height: 1.5, $weight: 400, $color: rgb(0, 0, 0)) {
@@ -42,12 +46,19 @@ $font-family-secondary: 'Marydale Regular';
     padding: 1rem 2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
-* {
+ /* Mixin pour les boutons */
+ @mixin btn($colorbtn: rgb(0, 0, 0), $color: rgb(255, 255, 255)) {
+    background-color: $colorbtn;
+    color: $color;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  * {
     box-sizing: border-box;
 
 }
-
 body {
     gap: 8rem;
 
@@ -55,6 +66,7 @@ body {
     header {
         .bg-body-tertiary {
             background-color: #ffffff !important;
+   
 
             .container-fluid {
                 .navbar-collapse {
@@ -421,6 +433,7 @@ body {
 
 
 
+/** foot  **/
 
 /** foot  **/
 

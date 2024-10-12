@@ -180,6 +180,7 @@ body {
     // -------AVIS-----------
     main {
         gap: 20vh;
+
         .avis {
             .partIllu {
                 h1 {
@@ -276,6 +277,7 @@ body {
             padding-inline: 8%;
             gap: 3vh;
             background-color: rgba(0, 0, 0, 0.026);
+
             h1 {
                 @include typography2();
                 font-weight: 600;
@@ -396,11 +398,12 @@ body {
 
             .row {
                 .col-md-8 {
+
                     .btn-primary {
                         @include btn();
                         border: none;
                         @include typography2();
-                        font-size: 22px;
+                        font-size: clamp(16px, 2.5vw + 2px, 22px);
                         color: white;
                         text-decoration: none;
 
@@ -408,6 +411,7 @@ body {
                             transform: scale(1.05);
                         }
                     }
+
                 }
             }
         }
@@ -422,6 +426,7 @@ body {
 
 footer {
     background-color: rgba(0, 0, 0, 0.026);
+
     .container {
         padding-top: 2%;
         border-top: 2px black solid;

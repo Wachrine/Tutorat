@@ -16,20 +16,21 @@ $font-family-primary: 'Roboto';
 $font-family-secondary: 'Marydale Regular';
 
 /* Mixin pour la typographie */
-@mixin typography1($family: $font-family-primary, $size: 40px, $line-height: 1.5, $weight: 400, $color: rgb(0, 0, 0)) {
+@mixin typography1($family: $font-family-primary, $line-height: 1.5, $weight: 400, $color: rgb(0, 0, 0)) {
     font-family: $family;
-    font-size: $size;
+    font-size: clamp(10px, 2vw + 5px, 17px);
     font-weight: $weight;
     line-height: $line-height;
     color: $color;
 }
 
-@mixin typography2($family: $font-family-secondary, $size: 60px, $line-height: 1.5, $weight: 400, $color: rgb(0, 0, 0)) {
+@mixin typography2($family: $font-family-secondary, $line-height: 1.5, $weight: 400, $color: rgb(0, 0, 0)) {
     font-family: $family;
-    font-size: $size;
+    // font-size: $size;
     font-weight: $weight;
     line-height: $line-height;
     color: $color;
+    font-size: clamp(40px, 5vw + 20px, 60px);
 }
 
 /* Mixin pour les boutons */
@@ -48,8 +49,6 @@ $font-family-secondary: 'Marydale Regular';
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     gap: 8rem;
 
     // --------HEADER-BANNER--------
@@ -72,7 +71,7 @@ body {
 
                             .nav-link {
                                 @include typography2();
-                                font-size: 24px;
+                                font-size: clamp(18px, 3vw + 3px, 24px);
                                 display: inline-block;
                                 background-color: rgb(255, 255, 255);
                                 border-radius: 13px;
@@ -119,7 +118,6 @@ body {
                     }
 
                     .btn-outline-success {
-                        position: absolute;
                         right: 27%;
                         bottom: 15%;
                         display: inline-block;
@@ -127,7 +125,7 @@ body {
                         border: none;
                         border-radius: 10px;
                         @include typography1();
-                        font-size: 14px;
+                        font-size: clamp(10px, 2vw + 4px, 14px);
                         color: white;
                     }
                 }
@@ -149,7 +147,6 @@ body {
                             a {
                                 text-decoration: none;
                                 @include typography1();
-                                font-size: 14px;
                                 white-space: nowrap;
 
                                 &:hover {
@@ -164,7 +161,6 @@ body {
                     p {
                         @include typography1();
                         color: rgba(213, 213, 213, 1);
-                        font-size: 15px;
                         margin-top: 1vh;
                     }
                 }
@@ -183,6 +179,7 @@ body {
 
     // -------AVIS-----------
     main {
+        gap: 20vh;
         .avis {
             .partIllu {
                 h1 {
@@ -201,21 +198,19 @@ body {
                                         h2 {
 
                                             @include typography2();
-                                            font-size: 40px;
+                                            font-size: clamp(30px, 5vw + 5px, 40px);
                                             font-weight: 600;
                                         }
 
                                         p {
                                             @include typography1();
                                             color: rgba(213, 213, 213, 1);
-                                            font-size: 17px;
                                         }
                                     }
 
                                     .status {
                                         p {
                                             @include typography1();
-                                            font-size: 17px;
                                         }
                                     }
                                 }
@@ -223,7 +218,6 @@ body {
                                 .txt {
                                     p {
                                         @include typography1();
-                                        font-size: 17px;
                                         font-weight: 500;
                                         bottom: 12%;
                                     }
@@ -281,7 +275,7 @@ body {
         .contenu {
             padding-inline: 8%;
             gap: 3vh;
-
+            background-color: rgba(0, 0, 0, 0.026);
             h1 {
                 @include typography2();
                 font-weight: 600;
@@ -305,13 +299,13 @@ body {
                         .card-body {
                             h5 {
                                 @include typography2();
-                                font-size: 20px;
+                                font-size: clamp(15px, 3vw + 5px, 20px);
+                                // font-size: 20px;
                                 font-weight: 600;
                             }
 
                             p {
                                 @include typography1();
-                                font-size: 15px;
                                 color: rgba(133, 62, 243, 1);
                                 font-weight: 600;
                             }
@@ -331,7 +325,7 @@ body {
 
                 a {
                     @include typography2();
-                    font-size: 25px;
+                    font-size: clamp(20px, 3vw + 5px, 25px);
                     color: white;
                     text-decoration: none;
                 }
@@ -345,6 +339,7 @@ body {
 
         .devenir {
             padding-inline: 20%;
+            background-color: rgba(0, 0, 0, 0.026);
 
             .row {
                 border: 2px black solid;
@@ -361,14 +356,15 @@ body {
 
                     h2 {
                         @include typography2();
-                        font-size: 35px;
+                        font-size: clamp(25px, 4vw + 5px, 35px);
                         font-weight: 600;
                         background-color: rgba(133, 62, 243, 1);
                         height: 2rem;
                     }
 
                     p {
-                        font-size: 25px;
+                        @include typography1();
+                        font-size: clamp(16px, 2.5vw + 4px, 22px);
                         margin: 0;
                     }
                 }
@@ -425,6 +421,7 @@ body {
 /** foot  **/
 
 footer {
+    background-color: rgba(0, 0, 0, 0.026);
     .container {
         padding-top: 2%;
         border-top: 2px black solid;
@@ -434,7 +431,7 @@ footer {
 
             h4 {
                 @include typography2();
-                font-size: 30px;
+                font-size: clamp(20px, 3vw + 5px, 30px);
                 font-weight: 600;
             }
 
@@ -445,7 +442,7 @@ footer {
                     a {
                         text-decoration: none;
                         @include typography1();
-                        font-size: 20px;
+                        font-size: clamp(15px, 2.5vw + 2px, 20px);
 
                         &:hover {
                             color: rgba(133, 62, 243, 1);

@@ -9,7 +9,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#myNavbar" data-bs-offset="0" tabindex="0"
-  class="p-3 m-0 border-0 bd-example m-0 border-0">
+  class="p-3 m-0 border-0 bd-example m-0 border-0 d-flex flex-column">
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -46,7 +46,7 @@
           </svg>
           <input class="form-control me-2 ps-5 w-50" type="search" placeholder="Que voulez-vous apprendre ?"
             aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Rechercher</button>
+          <button class="btn btn-outline-success position-absolute" type="submit">Rechercher</button>
         </form>
         <div class="liste_departement">
           <ul class="d-flex align-items-center flex-nowrap h-100 p-0 m-0">
@@ -64,8 +64,8 @@
       </div>
     </div>
   </header>
-  <main>
-    <section id="id_contenu" class="contenu d-flex justify-content-center align-items-center flex-column">
+  <main class="d-flex flex-column">
+    <section id="id_contenu" class="contenu d-flex justify-content-center align-items-center flex-column vh-100">
       <h1>Trouver le tuteur idéal est facile !</h1>
       <div class="row etapes">
         <div class="col-4 gx-5 gsap1">
@@ -102,7 +102,7 @@
       </div>
       <div class="btn"><a href="#">S’inscrire maintenant</a></div>
     </section>
-    <section id="id_avis" class="avis d-flex align-items-center justify-content-center">
+    <section id="id_avis" class="avis d-flex align-items-center justify-content-center vh-100">
       <div class="partIllu col-6 d-flex flex-column align-items-center">
         <h1>Votre avis compte !</h1>
         <img src="img/avis illu 1.png" alt="">
@@ -213,7 +213,7 @@
         </div>
       </div>
     </section>
-    <section id="id_devenir" class="devenir d-flex justify-content-center align-items-center flex-column">
+    <section id="id_devenir" class="devenir d-flex justify-content-center align-items-center flex-column vh-100">
       <div class="row">
         <img class="col-6" src="img/main.png" alt="">
         <div class="col-6 gx-5 d-flex justify-content-center align-items-center flex-column">
@@ -224,8 +224,8 @@
       </div>
     </section>
 
-    <section id="id_contact" class="contact container">
-      <h1>Contactez-nous !</h1>
+    <section id="id_contact" class="contact container vh-100 d-flex justify-content-center flex-column">
+      <h1 class="d-flex justify-content-center mb-5">Contactez-nous !</h1>
       <div class="row justify-content-center">
         <div class="col-md-8 col-6">
           <div class="mb-3">

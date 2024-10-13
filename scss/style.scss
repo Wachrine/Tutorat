@@ -1,0 +1,477 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "_mobile.scss";
+
+
+// POUR RANIAAAA
+
+/* Importation des polices de GoogleFont */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+// font telecharger 
+@font-face {
+    font-family: 'Marydale Regular';
+    src: url(/font/Marydale_Regular.ttf) format("opentype");
+}
+
+/* Définition des variables pour les familles de police */
+$font-family-primary: 'Roboto';
+$font-family-secondary: 'Marydale Regular';
+
+/* Mixin pour la typographie */
+@mixin typography1($family: $font-family-primary, $line-height: 1.5, $weight: 400, $color: rgb(0, 0, 0)) {
+    font-family: $family;
+    font-size: clamp(10px, 2vw + 5px, 17px);
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+    text-align: center;
+}
+
+@mixin typography2($family: $font-family-secondary, $line-height: 1.5, $weight: 400, $color: rgb(0, 0, 0)) {
+    font-family: $family;
+    // font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+    font-size: clamp(40px, 5vw + 20px, 60px);
+}
+
+/* Mixin pour les boutons */
+@mixin btn($colorbtn: rgb(0, 0, 0), $color: rgb(255, 255, 255)) {
+    background-color: $colorbtn;
+    color: $color;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+ /* Mixin pour les boutons */
+ @mixin btn($colorbtn: rgb(0, 0, 0), $color: rgb(255, 255, 255)) {
+    background-color: $colorbtn;
+    color: $color;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  * {
+    box-sizing: border-box;
+
+}
+body {
+    gap: 8rem;
+
+    // --------HEADER-BANNER--------
+    header {
+        .bg-body-tertiary {
+            background-color: #ffffff !important;
+   
+
+            .container-fluid {
+                .navbar-collapse {
+                    right: 0;
+                    z-index: 100;
+                    background-color: rgba(253, 46, 46, 0);
+
+                    .nav-fill {
+                        .nav-item {
+                            background-color: rgba(255, 255, 255, 0);
+                            border-radius: 13px;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+
+                            .nav-link {
+                                @include typography2();
+                                font-size: clamp(18px, 3vw + 3px, 24px);
+                                display: inline-block;
+                                background-color: rgb(255, 255, 255);
+                                border-radius: 13px;
+                                padding-left: 1rem;
+                                padding-right: 1rem;
+                            }
+
+                            .nav-link.active {
+                                color: rgb(255, 255, 255);
+                                display: inline-block;
+                                background-color: rgb(0, 0, 0);
+                                border-radius: 13px;
+                                padding-left: 1rem;
+                                padding-right: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .banner {
+            .partRech {
+                gap: 0.5rem;
+
+                .d-flex {
+                    .bi-search {
+                        position: absolute;
+                        z-index: 5;
+                        bottom: 24%;
+                        left: 26%;
+                    }
+
+                    .form-control {
+                        border: 2px solid black;
+                        height: 7vh;
+                        border-radius: 12px;
+                    }
+
+                    ::placeholder {
+                        @include typography2();
+                        font-size: 18px;
+                        color: rgba(171, 171, 171, 1);
+                    }
+
+                    .btn-outline-success {
+                        right: 27%;
+                        bottom: 15%;
+                        display: inline-block;
+                        background-color: black;
+                        border: none;
+                        border-radius: 10px;
+                        @include typography1();
+                        font-size: clamp(10px, 2vw + 4px, 14px);
+                        color: white;
+                    }
+                }
+
+                .liste_departement {
+                    display: inline-block;
+                    border: 2px solid black;
+                    width: auto;
+                    height: 5vh;
+                    border-radius: 12px;
+                    padding: 0 1rem;
+
+                    ul {
+                        gap: 1rem;
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                text-decoration: none;
+                                @include typography1();
+                                white-space: nowrap;
+
+                                &:hover {
+                                    color: rgba(133, 62, 243, 1);
+                                    transform: scale(1.1);
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        @include typography1();
+                        color: rgba(213, 213, 213, 1);
+                        margin-top: 1vh;
+                    }
+                }
+
+            }
+
+            .partIllu {
+                img {
+                    object-fit: contain;
+                    width: 50vw;
+                }
+            }
+        }
+
+    }
+
+    // -------AVIS-----------
+    main {
+        gap: 20vh;
+
+        .avis {
+            .partIllu {
+                h1 {
+                    @include typography2();
+                    font-weight: 600;
+                }
+            }
+
+            .partCarousel {
+                .carousel {
+                    .carousel-inner {
+                        .carousel-item {
+                            .carousel-caption {
+                                .profil {
+                                    .ident {
+                                        h2 {
+
+                                            @include typography2();
+                                            font-size: clamp(30px, 5vw + 5px, 40px);
+                                            font-weight: 600;
+                                        }
+
+                                        p {
+                                            @include typography1();
+                                            color: rgba(213, 213, 213, 1);
+                                        }
+                                    }
+
+                                    .status {
+                                        p {
+                                            @include typography1();
+                                        }
+                                    }
+                                }
+
+                                .txt {
+                                    p {
+                                        @include typography1();
+                                        font-weight: 500;
+                                        bottom: 12%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    .carousel-indicators {
+                        z-index: 100;
+                        bottom: -9%;
+
+                        button {
+                            margin-bottom: 0;
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background-color: #000000;
+                            border: none;
+                            opacity: 0.5;
+                        }
+
+                        button.active {
+                            background-color: #000000;
+                            opacity: 1;
+                        }
+
+                        button:hover {
+                            opacity: 0.75;
+                        }
+                    }
+                }
+
+                .arrow {
+
+                    .carousel-control-prev,
+                    .carousel-control-next {
+                        background-color: rgba(0, 0, 0, 0.837);
+                        border: none;
+                        border-radius: 20%;
+                        width: 50px;
+                        height: 50px;
+
+                        svg {
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .contenu {
+            padding-inline: 8%;
+            gap: 3vh;
+            background-color: rgba(0, 0, 0, 0.026);
+
+            h1 {
+                @include typography2();
+                font-weight: 600;
+                margin-bottom: 4vh;
+            }
+
+            .row {
+                border: 2px black solid;
+                border-bottom: 10px black solid;
+                border-radius: 3vw;
+                padding-block: 4%;
+                padding-inline: 4%;
+                align-items: center;
+
+                .col-4 {
+                    .card {
+                        border: 2px black solid;
+                        border-radius: 2vw;
+                        padding-block: 2%;
+
+                        .card-body {
+                            h5 {
+                                @include typography2();
+                                font-size: clamp(15px, 3vw + 5px, 20px);
+                                // font-size: 20px;
+                                font-weight: 600;
+                            }
+
+                            p {
+                                @include typography1();
+                                color: rgba(133, 62, 243, 1);
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 25%;
+                        margin-bottom: 5px;
+                    }
+
+                }
+            }
+
+            .btn {
+                @include btn();
+
+                a {
+                    @include typography2();
+                    font-size: clamp(20px, 3vw + 5px, 25px);
+                    color: white;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+            }
+        }
+
+        .devenir {
+            padding-inline: 20%;
+            background-color: rgba(0, 0, 0, 0.026);
+
+            .row {
+                border: 2px black solid;
+                border-bottom: 10px black solid;
+                border-radius: 3vw;
+                padding-block: 2%;
+
+                img {
+                    object-fit: cover;
+                }
+
+                .gx-5 {
+                    gap: 2vh;
+
+                    h2 {
+                        @include typography2();
+                        font-size: clamp(25px, 4vw + 5px, 35px);
+                        font-weight: 600;
+                        background-color: rgba(133, 62, 243, 1);
+                        height: 2rem;
+                    }
+
+                    p {
+                        @include typography1();
+                        font-size: clamp(16px, 2.5vw + 4px, 22px);
+                        margin: 0;
+                    }
+                }
+
+                .btn {
+                    @include btn();
+
+                    a {
+                        @include typography2();
+                        font-size: 22px;
+                        color: white;
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+
+                }
+
+            }
+        }
+
+        #id_contact {
+            h1 {
+                @include typography2();
+                font-weight: 600;
+            }
+
+            .row {
+                .col-md-8 {
+
+                    .btn-primary {
+                        @include btn();
+                        border: none;
+                        @include typography2();
+                        font-size: clamp(16px, 2.5vw + 2px, 22px);
+                        color: white;
+                        text-decoration: none;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/** foot  **/
+
+/** foot  **/
+
+footer {
+    background-color: rgba(0, 0, 0, 0.026);
+
+    .container {
+        padding-top: 2%;
+        border-top: 2px black solid;
+
+        .col-4 {
+            align-items: left;
+
+            h4 {
+                @include typography2();
+                font-size: clamp(20px, 3vw + 5px, 30px);
+                font-weight: 600;
+            }
+
+            ul {
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        @include typography1();
+                        font-size: clamp(15px, 2.5vw + 2px, 20px);
+
+                        &:hover {
+                            color: rgba(133, 62, 243, 1);
+                            transform: scale(1.1);
+                            font-weight: 500;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}

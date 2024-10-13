@@ -16,8 +16,9 @@ body::before{
 
     .row{
         flex-direction: column;
-        width: 60%;
-        .col-6{
+        width: 92%;
+        .col-md-4{
+            margin-top: 5%;
             img{
                 width: 30%;
                 margin-bottom: 5px;
@@ -37,13 +38,78 @@ body::before{
         // }
     }
 }
+    
+    // sou
+
+    .banner{
+        flex-direction: column;
+        height: auto;
+        .partRech{
+            width: auto;
+        }
+     }
 
 
+     footer{
+        flex-direction: column;
+     }
+}
 
+@media (max-width:992px) {
+    body::before{
+    content: "≥992px  (l)";
+    background-color: rgb(255, 206, 127);
+    }
+    .avis{
+        flex-direction: column;
+        .carousel-caption{
+            flex-direction: column !important;
+        }
+        .w-50{
+            width: 100% !important;
+        }
+        .partIllu{
+                    img{
+               width: 30%;
+            }
+            
+        }
+    }
+}
 
-// sou
+@media (max-width:768px) {
+    body::before{
+    content: "≥768px  (md)";
+    background-color: rgb(255, 242, 127);
+    }
+    .contenu{
+
+        justify-content: center;
+        .row{
+            flex-direction: column;
+            width: 92%;
+            .col-md-4{
+                margin-top: 5%;
+                img{
+                    width: 30%;
+                    margin-bottom: 5px;
+                }
+           
+        }
+        }
+    }
+
+}
+
+@media (max-width:1200px) {
+    body::before{
+    content: "≥1200px  (xl)";
+    background-color: rgb(255, 242, 127);
+    }
+        // sou
 
  .banner{
+    margin-top: 90px;
     flex-direction: column;
     height: auto;
     .partRech{
@@ -51,20 +117,13 @@ body::before{
     }
  }
 
+ .devenir {
+    .row{
+        flex-direction: column;
+        align-items: center;
+     }
 }
 
-@media (min-width:992px) {
-    body::before{
-    content: "≥992px  (l)";
-    background-color: rgb(255, 206, 127);
-    }
-}
-
-@media (min-width:1200px) {
-    body::before{
-    content: "≥1200px  (xl)";
-    background-color: rgb(255, 242, 127);
-    }
 }
 
 

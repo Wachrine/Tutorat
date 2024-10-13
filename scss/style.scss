@@ -2,6 +2,7 @@
 @import "_mobile.scss";
 
 
+
 // POUR RANIAAAA
 
 /* Importation des polices de GoogleFont */
@@ -35,6 +36,7 @@ $font-family-secondary: 'Marydale Regular';
     line-height: $line-height;
     color: $color;
     font-size: clamp(40px, 5vw + 20px, 60px);
+    text-align: center;
 }
 
 /* Mixin pour les boutons */
@@ -198,6 +200,7 @@ body {
                 h1 {
                     @include typography2();
                     font-weight: 600;
+                    text-align: center
                 }
             }
 
@@ -304,7 +307,7 @@ body {
                 padding-inline: 4%;
                 align-items: center;
 
-                .col-4 {
+                .col-md-4 {
                     .card {
                         border: 2px black solid;
                         border-radius: 2vw;
@@ -444,9 +447,9 @@ footer {
         padding-top: 2%;
         border-top: 2px black solid;
 
-        .col-4 {
+        .col-6 {
             align-items: left;
-
+            flex-direction: row;
             h4 {
                 @include typography2();
                 font-size: clamp(20px, 3vw + 5px, 30px);
@@ -461,7 +464,7 @@ footer {
                         text-decoration: none;
                         @include typography1();
                         font-size: clamp(15px, 2.5vw + 2px, 20px);
-
+                        text-align: start;
                         &:hover {
                             color: rgba(133, 62, 243, 1);
                             transform: scale(1.1);

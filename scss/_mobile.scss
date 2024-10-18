@@ -12,6 +12,15 @@ body::before{
     background-color: rgb(248, 124, 124);
     }
 
+
+    .liste_departement{
+        ul{
+          flex-wrap: wrap;  
+          padding-left: 0;
+        }
+        
+    }
+
 .contenu{
 
     .row{

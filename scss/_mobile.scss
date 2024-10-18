@@ -1,16 +1,9 @@
-body::before{
-    content: "<576px (xs)";
-    background-color: rgb(251, 59, 59);
-    width: 10vw;
-    position:fixed;
-    z-index: 100;
-}
 
 @media (max-width:576px) {
-    body::before{
-    content: "≥576px  (small)";
-    background-color: rgb(248, 124, 124);
-    }
+    // body::before{
+    // content: "≥576px  (small)";
+    // background-color: rgb(248, 124, 124);
+    // }
 
 
     .liste_departement{
